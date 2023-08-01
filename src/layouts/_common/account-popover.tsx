@@ -22,12 +22,16 @@ import CustomPopover, { usePopover } from 'src/components/custom-popover';
 
 const OPTIONS = [
   {
-    label: 'Home',
+    label: 'Permission',
     linkTo: '/',
   },
   {
-    label: 'Settings',
-    linkTo: '/dashboard/settings/hlb',
+    label: 'User & Group',
+    linkTo: '/dashboard/UserGroup',
+  },
+  {
+    label: 'Role Management',
+    linkTo: '/dashboard/RoleManagement',
   },
 ];
 

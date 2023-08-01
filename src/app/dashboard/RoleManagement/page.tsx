@@ -1,12 +1,12 @@
 // sections
-import HUBView from 'src/sections/hub/view';
+import RoleManagementView from 'src/sections/RoleManagement/view';
 
 // ----------------------------------------------------------------------
 
 export const metadata = {
-  title: 'Dashboard: HUB Setting',
+  title: 'Dashboard: Role Management',
 };
 
 export default function Page() {
-  return <HUBView />;
+  return <RoleManagementView />;
 }

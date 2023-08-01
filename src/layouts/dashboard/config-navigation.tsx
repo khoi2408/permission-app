@@ -19,6 +19,7 @@ const ICONS = {
   systemConfiguration: icon('ic_system_configuration'),
   applicationPermission: icon('ic_application_permission'),
   userGroup: icon('ic_user_group'),
+  roleManagement: icon('ic_user-role'),
 };
 
 // ----------------------------------------------------------------------
@@ -30,25 +31,11 @@ export function useNavData() {
         subheader: 'management',
         items: [
           { title: 'Application Permission', path: paths.dashboard.root, icon: ICONS.applicationPermission },
-          { title: 'System Configuration', path: paths.dashboard.systemConfiguration, icon: ICONS.systemConfiguration },
           { title: 'User & Group', path: paths.dashboard.userGroup, icon: ICONS.userGroup },
+          { title: 'Role Management', path: paths.dashboard.roleManagement, icon: ICONS.roleManagement },
         ],
       },
-
-      {
-        subheader: 'settings',
-        items: [
-          {
-            title: 'Settings',
-            path: paths.dashboard.settings.hlb,
-            icon: ICONS.settings,
-            children: [
-              { title: 'HLB Setting', path: paths.dashboard.settings.hlb },
-              { title: 'HUB Setting', path: paths.dashboard.settings.hub },
-            ],
-          },
-        ],
-      },
+      
     ],
     []
   );

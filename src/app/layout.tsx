@@ -28,24 +28,24 @@ export const metadata = {
   icons: [
     {
       rel: 'icon',
-      url: '/favicon/favicon-16.png',
+      url: '/favicon/WinG_single_logo.png',
     },
     {
       rel: 'icon',
       type: 'image/png',
       sizes: '16x16',
-      url: '/favicon/favicon-16x16.png',
+      url: '/favicon/WinG_single_logo.png',
     },
     {
       rel: 'icon',
       type: 'image/png',
       sizes: '32x32',
-      url: '/favicon/favicon-32x32.png',
+      url: '/favicon/WinG_single_logo.png',
     },
     {
       rel: 'apple-touch-icon',
       sizes: '180x180',
-      url: '/favicon/apple-touch-icon.png',
+      url: '/favicon/WinG_single_logo.png',
     },
   ],
 };

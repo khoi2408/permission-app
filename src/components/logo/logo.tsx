@@ -27,7 +27,7 @@ const Logo = forwardRef<HTMLDivElement, LogoProps>(
     const logo = (
       <Box
         component="img"
-        src="/logo/hahaho.png"
+        src="/logo/WinG_full_logo.png"
         sx={{ width: 160, height: 40, cursor: 'pointer', ...sx }}
       />
     );

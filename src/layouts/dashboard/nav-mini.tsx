@@ -46,7 +46,7 @@ export default function NavMini() {
       >
         <Box
           component="img"
-          src="/logo/logo_mini.png"
+          src="/logo/WinG_single_logo.png"
           sx={{ width: 40, height: 40, cursor: 'pointer', mx: 'auto', my: 2 }}
         />
 

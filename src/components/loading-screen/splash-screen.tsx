@@ -37,7 +37,7 @@ export default function SplashScreen({ sx, ...other }: BoxProps) {
             repeat: Infinity,
           }}
         >
-          <Box component="img" src="/logo/logo_mini.png" sx={{ width: 64, height: 64 }} />
+          <Box component="img" src="/logo/WinG_single_logo.png" sx={{ width: 64, height: 64 }} />
         </m.div>
 
         <Box

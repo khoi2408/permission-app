@@ -20,11 +20,7 @@ export const paths = {
   dashboard: {
     root: ROOTS.DASHBOARD,
     appPermission: `${ROOTS.DASHBOARD}/ApplicaitonPermission`,
-    systemConfiguration: `${ROOTS.DASHBOARD}/SystemConfiguration`,
+    roleManagement: `${ROOTS.DASHBOARD}/RoleManagement`,
     userGroup: `${ROOTS.DASHBOARD}/UserGroup`,
-    settings: {
-      hlb: `${ROOTS.DASHBOARD}/settings/hlb`,
-      hub: `${ROOTS.DASHBOARD}/settings/hub`,
-    }
   },
 };
