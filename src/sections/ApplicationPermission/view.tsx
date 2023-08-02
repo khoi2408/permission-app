@@ -1,12 +1,13 @@
 'use client';
 
 // @mui
-import { alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
+import { alpha } from '@mui/material/styles';
 // components
+import CustomBreadcrumbs from 'src/components/custom-breadcrumbs';
 import { useSettingsContext } from 'src/components/settings';
+import { paths } from 'src/routes/paths';
 
 // ----------------------------------------------------------------------
 
@@ -15,7 +16,14 @@ export default function ApplicationPermissionView() {
 
   return (
     <Container maxWidth={settings.themeStretch ? false : 'xl'}>
-      <Typography variant="h4"> Application Permission </Typography>
+      <CustomBreadcrumbs
+        heading="Application Permission"
+        links={[
+          { name: 'Dashboard', href: paths.dashboard.root },
+          { name: 'Application Permission', href: paths.dashboard.root },
+        ]}
+        sx={{ mb: { xs: 3, md: 5 } }}
+      />
 
       <Box
         sx={{
