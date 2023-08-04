@@ -4,4 +4,6 @@ export type IRoleCard = {
     description: string;
     coverUrl: string;
     avatarUrl: string;
+    users?: string[];
+    groups?: string[];
 }

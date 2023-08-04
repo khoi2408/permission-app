@@ -18,9 +18,11 @@ const ROLES = [
     id: '1',
     name: 'Admin',
     description: 'Can do anything',
-    coverUrl: '/assets/background/overlay_2.jpg',
-    avatarUrl: '/static/mock-images/avatars/avatar_default.jpg',
-  }
+    coverUrl: '/assets/images/background/cover_1.jpg',
+    avatarUrl: '/assets/images/avatar/avatar_14.jpg',
+    users: ['111', '222', '444'],
+    groups: []
+  },
 ]
 export default function RoleManagementView() {
   const settings = useSettingsContext();
