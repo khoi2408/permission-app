@@ -1,9 +1,9 @@
 // @mui
-import { useTheme } from '@mui/material/styles';
-import Stack from '@mui/material/Stack';
 import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
+import Stack from '@mui/material/Stack';
+import { useTheme } from '@mui/material/styles';
+import Toolbar from '@mui/material/Toolbar';
 // theme
 import { bgBlur } from 'src/theme/css';
 // hooks
@@ -11,17 +11,12 @@ import { useOffSetTop } from 'src/hooks/use-off-set-top';
 import { useResponsive } from 'src/hooks/use-responsive';
 // components
 import Logo from 'src/components/logo';
-import SvgColor from 'src/components/svg-color';
 import { useSettingsContext } from 'src/components/settings';
+import SvgColor from 'src/components/svg-color';
 //
 import { HEADER, NAV } from '../config-layout';
 import {
-  Searchbar,
-  AccountPopover,
-  SettingsButton,
-  LanguagePopover,
-  ContactsPopover,
-  NotificationsPopover,
+  AccountPopover, Searchbar, SettingsButton
 } from '../_common';
 
 // ----------------------------------------------------------------------
@@ -64,7 +59,7 @@ export default function Header({ onOpenNav }: Props) {
         justifyContent="flex-end"
         spacing={{ xs: 0.5, sm: 1 }}
       >
-        <LanguagePopover />
+        {/* <LanguagePopover /> */}
 
         <SettingsButton />
 

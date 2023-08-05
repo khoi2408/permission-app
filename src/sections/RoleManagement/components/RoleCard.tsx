@@ -10,6 +10,9 @@ import Typography from '@mui/material/Typography';
 import { AvatarShape } from 'src/assets/illustrations';
 import CustomPopover, { usePopover } from 'src/components/custom-popover';
 import Iconify from 'src/components/iconify';
+import ConfirmDialog from 'src/components/confirm-dialog';
+import { useBoolean } from 'src/hooks/use-boolean';
+import Button from '@mui/material/Button';
 import Image from '../../../components/image';
 import { IRoleCard } from '../type/role';
 
@@ -19,6 +22,7 @@ type Props = {
 
 export default function RoleCard({ role }: Props) {
   const popover = usePopover();
+  const confirm = useBoolean();
   const theme = useTheme();
   const { name, description, coverUrl, avatarUrl, users, groups } = role;
 
@@ -125,6 +129,7 @@ export default function RoleCard({ role }: Props) {
 
         <MenuItem
           onClick={() => {
+            confirm.onTrue();
             popover.onClose();
           }}
           sx={{ color: 'error.main' }}
@@ -133,6 +138,23 @@ export default function RoleCard({ role }: Props) {
           Delete
         </MenuItem>
       </CustomPopover>
+      <ConfirmDialog
+        open={confirm.value}
+        onClose={confirm.onFalse}
+        title="Delete"
+        content="Are you sure want to delete?"
+        action={
+          <Button
+            variant="contained"
+            color="error"
+            onClick={() => {
+              confirm.onFalse()
+            }}
+          >
+            Delete
+          </Button>
+        }
+      />
     </Card>
   );
 }

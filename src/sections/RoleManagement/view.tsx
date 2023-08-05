@@ -3,13 +3,14 @@
 import Button from '@mui/material/Button';
 // @mui
 import Container from '@mui/material/Container';
+import { useCallback, useState } from 'react';
 import CustomBreadcrumbs from 'src/components/custom-breadcrumbs';
 import Iconify from 'src/components/iconify';
 // components
 import { useSettingsContext } from 'src/components/settings';
-import { RouterLink } from 'src/routes/components';
 import { paths } from 'src/routes/paths';
 import RoleCardList from './components/RoleCardList';
+import RoleDialog from './components/RoleDialog';
 
 // ----------------------------------------------------------------------
 
@@ -24,8 +25,29 @@ const ROLES = [
     groups: []
   },
 ]
+
+const defaultRole = {
+  id: '',
+  name: '',
+  description: '',
+  coverUrl: '',
+  avatarUrl: '',
+  users: [],
+  groups: []
+};
+
 export default function RoleManagementView() {
+  
   const settings = useSettingsContext();
+
+  // ================================== MODAL ==========================================
+  const [updateData, setUpdateData] = useState<any | undefined>(undefined);
+  const handleCloseDialog = useCallback(() => {
+    setUpdateData(undefined);
+  }, []);
+  const handleCreateRole = (data: any) => {
+    setUpdateData(defaultRole);
+  }
 
   return (
     <Container maxWidth={settings.themeStretch ? false : 'lg'}>
@@ -37,17 +59,16 @@ export default function RoleManagementView() {
         ]}
         action={
           <Button
-            component={RouterLink}
-            href={paths.dashboard.roleManagement}
             variant="contained"
             startIcon={<Iconify icon="mingcute:add-line" />}
+            onClick={handleCreateRole}
           >
             New Role
           </Button>
         }
         sx={{ mb: { xs: 3, md: 5 } }}
       />
-
+      <RoleDialog dataRole={updateData} onClose={handleCloseDialog} />
       <RoleCardList roles={ROLES} />
     </Container>
   );
