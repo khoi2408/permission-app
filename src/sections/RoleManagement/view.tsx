@@ -16,13 +16,22 @@ import RoleDialog from './components/RoleDialog';
 
 const ROLES = [
   {
-    id: '1',
+    id: '111',
     name: 'Admin',
     description: 'Can do anything',
     coverUrl: '/assets/images/background/cover_1.jpg',
     avatarUrl: '/assets/images/avatar/avatar_14.jpg',
     users: ['111', '222', '444'],
     groups: []
+  },
+  {
+    id: '222',
+    name: 'User',
+    description: 'Can do read only',
+    coverUrl: '/assets/images/background/cover_2.jpg',
+    avatarUrl: '/assets/images/avatar/avatar_4.jpg',
+    users: ['111', '222', '444', '555', '666', '777', '888', '999'],
+    groups: ['333', '000']
   },
 ]
 
